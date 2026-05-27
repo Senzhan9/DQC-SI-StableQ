@@ -276,7 +276,7 @@ layout: default
   <div class="pc-card-grid people-with-photos">
     {% for p in site.data.organizers %}
     <a class="pc-card pc-card-link" href="{{ p.url }}" target="_blank" rel="noopener">
-      <div class="pc-card-photo"><img src="{{ '/assets/img/people/' | append: p.photo | relative_url }}" alt="{{ p.name }}" loading="lazy"></div>
+      <div class="pc-card-photo"><img src="/DQC-SI-StableQ/assets/img/people/{{ p.photo }}" alt="{{ p.name }}" loading="lazy"></div>
       <div class="pc-card-body">
         <div class="name">{{ p.name }}</div>
         <div class="role">{{ p.role }}</div>
@@ -291,7 +291,7 @@ layout: default
   <div class="pc-card-grid people-with-photos pc-cards-compact">
     {% for p in site.data.program_committee %}
     <a class="pc-card pc-card-link" href="{{ p.url }}" target="_blank" rel="noopener">
-      <div class="pc-card-photo"><img src="{{ '/assets/img/people/' | append: p.photo | relative_url }}" alt="{{ p.name }}" loading="lazy"></div>
+      <div class="pc-card-photo"><img src="/DQC-SI-StableQ/assets/img/people/{{ p.photo }}" alt="{{ p.name }}" loading="lazy"></div>
       <div class="pc-card-body">
         <div class="name">{{ p.name }}</div>
         <div class="aff"><em>{{ p.title }}</em><br>{{ p.affiliation }}</div>
