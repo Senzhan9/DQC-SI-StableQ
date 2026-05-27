@@ -25,30 +25,14 @@ abstract: >
   interplay between hardware limitations, communication processes, and application
   requirements, enabling more efficient and scalable system designs.
 
-objectives_short: >
-  The short-term objective is to introduce the key challenges and emerging
-  solutions in cross-layer infrastructure for DQC. Through invited talks and
-  discussions, the workshop will present state-of-the-art approaches in DQC
-  cross-layer infrastructure, while fostering interdisciplinary exchange among
-  researchers in quantum computing, networking, systems, and applications.
-
-objectives_long: >
-  The long-term vision is to establish cross-layer infrastructure as a foundational
-  paradigm for scalable quantum systems and to build a sustained research community
-  around this theme. The workshop aims to catalyze the development of a shared
-  research roadmap and open challenges for DQC infrastructure. It also seeks to
-  promote common frameworks, benchmarks, and simulation platforms that integrate
-  multiple system layers, ultimately supporting the realization of scalable quantum
-  systems for scientific discoveries and industrial applications.
-
-outcomes: >
-  The workshop is expected to catalyze a cross-layer DQC infrastructure community
-  connecting researchers in quantum computing, networking, systems, and applications.
-  Key outcomes include the identification of open challenges, an initial research
-  roadmap for cross-layer quantum infrastructure (covering core design principles,
-  system abstractions, and priority research directions), and progress toward shared
-  frameworks and benchmarks integrating multiple system layers.
-
+objectives: >
+  The workshop focuses on advancing cross-layer infrastructure for distributed
+  quantum computing (DQC) by bringing together researchers from quantum computing,
+  networking, systems, and applications. Through talks and discussions, it will
+  highlight key challenges, emerging solutions, and state-of-the-art approaches
+  for scalable quantum systems, while fostering interdisciplinary collaboration
+  and community building around shared frameworks, benchmarks, research
+  directions, and future collaborative efforts in DQC.
 target_audience: >
   Researchers and practitioners in quantum computing, quantum networking, computer
   systems, and applications — particularly those interested in scalable and
