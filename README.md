@@ -85,13 +85,13 @@ If you don't have Ruby installed and don't want to bother, just push and let Git
 2. From this folder, push to `main`:
    ```bash
    git add .
-   git commit -m "Configure GitHub Pages"
+   git commit -m "Configure GitHub Pages custom domain"
    git branch -M main
    git push -u origin main
    ```
 3. On GitHub → repo Settings → Pages → "Build and deployment" → Source: **Deploy from a branch** → Branch: **main** / Folder: **/ (root)**.
-4. Wait ~30 seconds. Visit `https://senzhan9.github.io/DQC-SI-StableQ/`.
-5. Keep `_config.yml` set to `url: "https://senzhan9.github.io"` and `baseurl: "/DQC-SI-StableQ"` for this repository-hosted URL.
+4. Set Custom domain to `dqc-si.com`, then enable Enforce HTTPS after DNS is verified.
+5. Keep `_config.yml` set to `url: "https://dqc-si.com"` and `baseurl: ""` for the custom domain.
 
 The PDF (`2026_Workshop_DQC_SI.pdf`) is in `exclude:` in `_config.yml`, so it won't be served by default. If you want to link to it from the site, remove it from `exclude:` and add a link in `_data/workshop.yml`.
 
