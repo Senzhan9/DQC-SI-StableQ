@@ -10,8 +10,8 @@ full_name: "Distributed Quantum Computing Systems and Infrastructure"
 tagline: "Distributed Quantum Computing Systems and Infrastructure"
 host_conference: "IEEE Quantum Week (QCE 2026)"
 host_conference_url: "https://qce.quantum.ieee.org"
-url: "https://dqc-si.com"
-baseurl: ""
+url: "https://senzhan9.github.io"
+baseurl: "/DQC-SI-StableQ"
 
 # Submission system
 submission_url: "https://easychair.org/conferences2/submissions?a=36846799"
