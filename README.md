@@ -81,19 +81,17 @@ If you don't have Ruby installed and don't want to bother, just push and let Git
 
 ## Deploying to GitHub Pages
 
-1. Create a new public repo on GitHub (suggested name: `dqc-si.github.io` for a clean URL like `https://dqc-si.github.io/`, or any name if you're OK with `https://<user>.github.io/repo/`).
-2. From this folder:
+1. Use the GitHub repo `senzhan9/DQC-SI-StableQ`.
+2. From this folder, push to `main`:
    ```bash
-   git init
    git add .
-   git commit -m "Initial DQC-SI 2026 site"
+   git commit -m "Configure GitHub Pages custom domain"
    git branch -M main
-   git remote add origin git@github.com:<you>/<repo>.git
    git push -u origin main
    ```
 3. On GitHub → repo Settings → Pages → "Build and deployment" → Source: **Deploy from a branch** → Branch: **main** / Folder: **/ (root)**.
-4. Wait ~30 seconds. Visit the URL GitHub shows.
-5. If the URL is `https://<user>.github.io/<repo>/`, set `baseurl: "/<repo>"` in `_config.yml` and commit.
+4. Set Custom domain to `dqc-si.com`, then enable Enforce HTTPS after DNS is verified.
+5. The repository includes a `CNAME` file with `dqc-si.com`. Keep `_config.yml` set to `url: "https://dqc-si.com"` and `baseurl: ""`.
 
 The PDF (`2026_Workshop_DQC_SI.pdf`) is in `exclude:` in `_config.yml`, so it won't be served by default. If you want to link to it from the site, remove it from `exclude:` and add a link in `_data/workshop.yml`.
 
