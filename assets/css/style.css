@@ -373,6 +373,57 @@ h2.subhead:first-child { margin-top: 0; }
 .sidecard p:last-child { margin-bottom: 0; }
 .sidecard a { font-weight: 500; }
 
+.important-date-card {
+  background: #fff7f7;
+  border-color: #f2b8b8;
+  border-left: 5px solid #d92d20;
+  padding: 26px 28px;
+}
+.important-date-card h4 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #9f1f18;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+}
+.alert-mark {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #d92d20;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.important-date-card .workshop-date-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #9f1f18;
+  margin: 18px 0 4px;
+}
+.important-date-card .workshop-date {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  margin-bottom: 16px;
+}
+.important-date-card .schedule-link {
+  font-size: 15px;
+  color: var(--ink-soft);
+}
+
 .topic-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;

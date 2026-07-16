@@ -17,6 +17,5 @@
   date: "2026-07-27"
   display: "Monday, July 27, 2026"
 - label: "Workshop date"
-  date: "2026-12-01"  # placeholder — will be aligned with QCE'26 schedule
-  display: "TBD (aligned with QCE'26 schedule)"
-  tentative: true
+  date: "2026-09-18"
+  display: "Friday, September 18, 2026"
