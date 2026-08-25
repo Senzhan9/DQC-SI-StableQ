@@ -419,6 +419,23 @@ h2.subhead:first-child { margin-top: 0; }
   letter-spacing: -0.01em;
   margin-bottom: 16px;
 }
+.important-date-card .program-jump {
+  display: inline-block;
+  background: var(--blue-deep);
+  color: white;
+  border: 1px solid var(--blue-deep);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 7px 10px;
+  margin: 0 0 14px;
+}
+.important-date-card .program-jump:hover {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: white;
+}
 .important-date-card .schedule-link {
   font-size: 15px;
   color: var(--ink-soft);
@@ -587,6 +604,17 @@ h2.subhead:first-child { margin-top: 0; }
 .review-criteria li::marker { color: var(--blue-bright); font-weight: 600; }
 
 /* ==================== PROGRAM ==================== */
+.program-note {
+  background: var(--blue-pale);
+  border-left: 4px solid var(--blue-bright);
+  color: var(--ink-soft);
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0 0 24px;
+  padding: 14px 18px;
+}
+.program-note a { font-weight: 600; }
+
 .session-block {
   margin-bottom: 22px;
   border: 1px solid var(--rule);
@@ -615,6 +643,12 @@ h2.subhead:first-child { margin-top: 0; }
   font-weight: 600;
   flex-grow: 1;
 }
+.session-header .session-meta {
+  display: grid;
+  gap: 4px;
+  justify-items: end;
+  text-align: right;
+}
 .session-header .session-time {
   font-family: 'JetBrains Mono', monospace;
   font-size: 11px;
@@ -622,13 +656,88 @@ h2.subhead:first-child { margin-top: 0; }
   opacity: 0.85;
   white-space: nowrap;
 }
+.session-header .session-room {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.9);
+  background: rgba(255,255,255,0.12);
+  padding: 2px 7px;
+}
 .session-body {
-  padding: 16px 22px;
+  padding: 0;
   font-size: 15px;
   line-height: 1.6;
   color: var(--ink-soft);
 }
 .session-body strong { color: var(--ink); font-weight: 600; }
+
+.talk-list {
+  display: grid;
+}
+.talk-item {
+  display: grid;
+  grid-template-columns: 104px 1fr;
+  gap: 18px;
+  padding: 16px 22px;
+  border-bottom: 1px solid var(--rule-soft);
+}
+.talk-item:last-child { border-bottom: none; }
+.talk-time {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--ink-faint);
+  white-space: nowrap;
+  padding-top: 2px;
+}
+.talk-type {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  background: var(--rule-soft);
+  padding: 2px 7px;
+  margin-bottom: 6px;
+}
+.speaker-talk .talk-type {
+  color: #9f1f18;
+  background: #fff0f0;
+}
+.opening-talk .talk-type {
+  color: var(--ink-soft);
+  background: var(--rule-soft);
+}
+.paper-talk .talk-type {
+  color: var(--blue);
+  background: var(--blue-pale);
+}
+.talk-title {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.28;
+  color: var(--ink);
+}
+.talk-speaker {
+  margin-top: 6px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.talk-speaker a {
+  color: var(--blue-bright);
+  border-bottom-color: rgba(45,108,183,0.25);
+}
+.talk-affiliation,
+.talk-authors {
+  margin-top: 5px;
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
 
 .standalone-item {
   padding: 14px 22px;
@@ -854,6 +963,10 @@ footer.site-footer {
   .pc-card-grid, .pc-card-grid.cols-2 { grid-template-columns: 1fr; }
   .pc-list-grid { grid-template-columns: 1fr; }
   .session-header { flex-direction: column; gap: 4px; align-items: flex-start; }
+  .session-header .session-meta { justify-items: start; text-align: left; }
+  .talk-item { grid-template-columns: 1fr; gap: 6px; padding: 16px 18px; }
+  .talk-time { white-space: normal; }
+  .talk-title { font-size: 16px; }
   .stack-layer { grid-template-columns: 1fr; }
   .stack-layer .layer-name { border-right: none; border-bottom: 2px solid var(--blue-bright); padding: 10px 16px; }
   .footer-inner { grid-template-columns: 1fr; padding: 0 18px; }

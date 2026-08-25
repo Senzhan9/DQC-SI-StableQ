@@ -42,6 +42,7 @@ layout: default
       <h4><span class="alert-mark">!</span>Important date</h4>
       <p class="workshop-date-label">Workshop date</p>
       <p class="workshop-date">Friday, September 18, 2026</p>
+      <a class="program-jump" href="#program" data-page="program">View workshop program</a>
       <p class="schedule-link">More schedule details are available on the <a href="https://qce.quantum.ieee.org/2026/qce26-schedule/workshop-schedule/" target="_blank" rel="noopener">QCE'26 workshop schedule</a>.</p>
     </div>
   </div>
@@ -194,64 +195,43 @@ layout: default
 <article class="page" id="page-program">
   <div class="page-header">
     <div class="page-eyebrow">03 / Program</div>
-    <h1 class="page-title">Tentative <em>agenda</em></h1>
-    <p class="page-subtitle">DQC-SI is structured around four thematic sessions covering the full quantum systems stack, plus a roadmap discussion. The final timing will be confirmed with QCE'26.</p>
+    <h1 class="page-title">Workshop <em>schedule</em></h1>
+    <p class="page-subtitle">DQC-SI is organized as three 90-minute sessions spanning DQC foundations, systems and networks, and distributed circuits, fault tolerance, and applications.</p>
   </div>
 
-  <div class="standalone-item">
-    <div class="name">Opening &amp; Keynote</div>
-    <div class="time">Session opens</div>
-  </div>
+  <p class="program-note">Official QCE session times and room are shown below. For the host conference listing, see the <a href="https://qce.quantum.ieee.org/2026/qce26-schedule/workshop-schedule/" target="_blank" rel="noopener">QCE'26 workshop schedule</a>.</p>
 
+  {% for s in site.data.sessions %}
   <div class="session-block">
     <div class="session-header">
-      <div><span class="session-num">Session 1</span><span class="session-name">Physical- and Link-Layer Foundations for DQC</span></div>
-      <div class="session-time">TBD</div>
+      <div><span class="session-num">Session {{ forloop.index }}</span><span class="session-name">{{ s.name }}</span></div>
+      <div class="session-meta">
+        <div class="session-time">{{ s.time }}</div>
+        <div class="session-room">Room {{ s.room }}</div>
+      </div>
     </div>
     <div class="session-body">
-      Physical-layer constraints of qubit interconnects, link-layer protocols, and the device characteristics that bound multi-QPU computation. Invited talk + contributed presentations.
+      <div class="talk-list">
+        {% for talk in s.talks %}
+        <div class="talk-item {% if talk.type contains 'Paper #' %}paper-talk{% elsif talk.type == 'Opening Remarks' %}opening-talk{% else %}speaker-talk{% endif %}">
+          <div class="talk-time">{{ talk.time }}</div>
+          <div class="talk-main">
+            <div class="talk-type">{{ talk.type }}</div>
+            <div class="talk-title">{{ talk.title }}</div>
+            {% if talk.speaker %}
+            <div class="talk-speaker"><a href="{{ talk.url }}" target="_blank" rel="noopener">{{ talk.speaker }}</a></div>
+            <div class="talk-affiliation">{{ talk.position }} · {{ talk.affiliation }}</div>
+            {% else %}
+            <div class="talk-authors">{{ talk.authors }}</div>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
     </div>
   </div>
+  {% endfor %}
 
-  <div class="session-block">
-    <div class="session-header">
-      <div><span class="session-num">Session 2</span><span class="session-name">Quantum Networking and Resource Management in DQC</span></div>
-      <div class="session-time">TBD</div>
-    </div>
-    <div class="session-body">
-      Entanglement routing, network topologies, and resource management for the quantum links that bind QPUs together. Invited talk + contributed presentations.
-    </div>
-  </div>
-
-  <div class="session-block">
-    <div class="session-header">
-      <div><span class="session-num">Session 3</span><span class="session-name">Systems and Software for DQC Execution</span></div>
-      <div class="session-time">TBD</div>
-    </div>
-    <div class="session-body">
-      Distributed compilers, runtimes, and middleware. Network-aware circuit partitioning and execution orchestration over multi-QPU systems. Invited talk + contributed presentations.
-    </div>
-  </div>
-
-  <div class="session-block">
-    <div class="session-header">
-      <div><span class="session-num">Session 4</span><span class="session-name">DQC Applications and Cross-Layer Co-Design</span></div>
-      <div class="session-time">TBD</div>
-    </div>
-    <div class="session-body">
-      Applications enabled by DQC, hybrid quantum-classical distributed systems, and co-design opportunities that emerge when application requirements drive lower-layer decisions. Invited talk + contributed presentations.
-    </div>
-  </div>
-
-  <div class="standalone-item">
-    <div class="name">Discussion — DQC Design Challenges and Future Directions</div>
-    <div class="time">Open forum</div>
-  </div>
-
-  <div class="standalone-item">
-    <div class="name">Closing Remarks</div>
-    <div class="time">Wrap-up</div>
-  </div>
 </article>
 
 <!-- COMMITTEE -->
