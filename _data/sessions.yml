@@ -71,7 +71,7 @@
   talks:
     - time: "3:00-3:25 PM"
       type: "Invited Talk"
-      title: "TBD"
+      title: "Towards Heterogeneous Quantum Data Centers: architecture and hardware for distributed quantum computing"
       speaker: "Stéphane Vinet"
       url: "https://www.linkedin.com/in/vinet17/"
       position: "Technical Leader - Quantum Networking"
