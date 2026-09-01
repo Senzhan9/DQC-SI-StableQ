@@ -644,11 +644,10 @@ h2.subhead:first-child { margin-top: 0; }
   flex-grow: 1;
 }
 .session-header .session-chair {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  opacity: 0.75;
+  font-family: 'Source Serif 4', serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: white;
   margin-top: 6px;
 }
 .session-header .session-chair a {
