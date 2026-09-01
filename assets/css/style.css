@@ -643,6 +643,18 @@ h2.subhead:first-child { margin-top: 0; }
   font-weight: 600;
   flex-grow: 1;
 }
+.session-header .session-chair {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.75;
+  margin-top: 6px;
+}
+.session-header .session-chair a {
+  color: inherit;
+  text-decoration: underline;
+}
 .session-header .session-meta {
   display: grid;
   gap: 4px;

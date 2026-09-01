@@ -4,6 +4,7 @@
   name: "Foundations, Perspectives, and Limits of DQC"
   time: "10:00 AM-11:30 AM EDT"
   room: "718B"
+  chair: "TBD"
   talks:
     - time: "10:00-10:05 AM"
       type: "Opening Remarks"
@@ -35,6 +36,7 @@
   name: "DQC Systems, Scheduling, Routing, and Evaluation"
   time: "1:00 PM-2:30 PM EDT"
   room: "718B"
+  chair: "TBD"
   talks:
     - time: "1:00-1:25 PM"
       type: "Invited Talk"
@@ -68,6 +70,7 @@
   name: "Distributed Circuits, Teleportation, QEC, and Applications"
   time: "3:00 PM-4:30 PM EDT"
   room: "718B"
+  chair: "TBD"
   talks:
     - time: "3:00-3:25 PM"
       type: "Invited Talk"

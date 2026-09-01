@@ -204,7 +204,12 @@ layout: default
   {% for s in site.data.sessions %}
   <div class="session-block">
     <div class="session-header">
-      <div><span class="session-num">Session {{ forloop.index }}</span><span class="session-name">{{ s.name }}</span></div>
+      <div>
+        <span class="session-num">Session {{ forloop.index }}</span><span class="session-name">{{ s.name }}</span>
+        {% if s.chair %}
+        <div class="session-chair">Session Chair: {% if s.chair_url %}<a href="{{ s.chair_url }}" target="_blank" rel="noopener">{{ s.chair }}</a>{% else %}{{ s.chair }}{% endif %}</div>
+        {% endif %}
+      </div>
       <div class="session-meta">
         <div class="session-time">{{ s.time }}</div>
         <div class="session-room">Room {{ s.room }}</div>
